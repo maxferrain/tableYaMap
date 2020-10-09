@@ -1,0 +1,340 @@
+<header class="header">
+  <div
+    class="modal-wrap authorization-modal"
+    id="authorization-modal"
+    style="display: none;"
+  >
+    <div class="modal-content">
+      <i class="gold-close" data-fancybox-close=""></i>
+      <h2>Авторизация</h2>
+      <p class="fc-gray">
+        Если у вас еще нет учетной записи,
+        <a data-src="#registration-modal" data-fancybox="" class="fc-blue"
+        >зарегистрируйтесь</a
+        >
+      </p>
+      <!-- <form data-request="onSignin" data-request-flash="">
+          <div class="custom-input">
+              <label for="mail2">Электронная почта</label>
+              <input name="login" type="email" id="mail2">
+          </div>
+          <div class="custom-input">
+              <label for="pass2">Пароль</label>
+              <input name="password" type="password" id="pass2">
+          </div>
+          <div class="modal-control">
+              <button type="submit" class="button gold-button small dib">вход</button>
+              <a data-src="#password-recovery" data-fancybox="" class="fc-blue">Забыли пароль?</a>
+          </div>
+      </form> -->
+    </div>
+  </div>
+  <div
+    class="modal-wrap subscription-modal"
+    id="subscription-modal"
+    style="display: none;"
+  >
+    <div class="modal-content">
+      <i class="gold-close" data-fancybox-close=""></i>
+      <h2>Подписка</h2>
+      <!--<p class="fc-gray ">Поясняющий текст про подписку и управление в ЛК</p>-->
+      <!-- <form action="" id="subscribe_form" data-request="onAddSubscribe" data-request-success="confirm_subscribe(this,context,data)">
+          <div class="custom-input">
+              <label for="mail">Электронная почта</label>
+              <input type="email" id="mail" name="email" required="">
+          </div>
+          <div class="checkbox-group">
+                              <p class="fc-gray">Получать по электронной почте:</p>
+                                  <div class="custom-checkbox">
+                      <input type="checkbox" id="ch1" name="types[]" value="1">
+                      <label for="ch1">Новости Министерства</label>
+                  </div>
+                                  <div class="custom-checkbox">
+                      <input type="checkbox" id="ch2" name="types[]" value="2">
+                      <label for="ch2">Отраслевые новости</label>
+                  </div>
+                                  <div class="custom-checkbox">
+                      <input type="checkbox" id="ch3" name="types[]" value="3">
+                      <label for="ch3">Анонсы</label>
+                  </div>
+                                  <div class="custom-checkbox">
+                      <input type="checkbox" id="ch4" name="types[]" value="4">
+                      <label for="ch4">Обзоры СМИ</label>
+                  </div>
+                                  <div class="custom-checkbox">
+                      <input type="checkbox" id="ch5" name="types[]" value="5">
+                      <label for="ch5">Выступления и интервью</label>
+                  </div>
+                                  <div class="custom-checkbox">
+                      <input type="checkbox" id="ch6" name="types[]" value="6">
+                      <label for="ch6">Открытые данные (новый набор)</label>
+                  </div>
+                                  <div class="custom-checkbox">
+                      <input type="checkbox" id="ch7" name="types[]" value="7">
+                      <label for="ch7">Открытые данные (обновление набора)</label>
+                  </div>
+                                  <div class="custom-checkbox">
+                      <input type="checkbox" id="ch8" name="types[]" value="8">
+                      <label for="ch8">Документы</label>
+                  </div>
+                          </div>
+          <div class="custom-input">
+              <label for="period">Период подписки</label>
+              <input type="text" name="period" id="period" class="custompicker custompicker-range">
+          </div>
+          <div class="custom-input date-search">
+              <label for="neigh2">Частота получения материалов</label>
+              <div class="jq-selectbox jqselect" id="neigh2-styler"><select name="frequency" id="neigh2">
+                  <option value="daily">Раз в день</option>
+                  <option value="weekly">Раз в неделю</option>
+                  <option value="monthly">Раз в месяц</option>
+              </select><div class="jq-selectbox__select"><div class="jq-selectbox__select-text">Раз в день</div><div class="jq-selectbox__trigger"><div class="jq-selectbox__trigger-arrow"></div></div></div><div class="jq-selectbox__dropdown" style="display: none;"><ul><li class="selected sel" style="">Раз в день</li><li style="">Раз в неделю</li><li style="">Раз в месяц</li></ul></div></div>
+          </div>
+          <button type="submit" class="button gold-button small dib">Сохранить</button>
+      </form> -->
+    </div>
+  </div>
+  <div
+    class="modal-wrap registration-modal large-modal"
+    id="registration-modal"
+    style="display: none;"
+  >
+    <div class="modal-content">
+      <i class="gold-close" data-fancybox-close=""></i>
+      <h2>Регистрация</h2>
+      <!-- <form data-request="onRegister" data-request-flash="" method="post">
+          <div class="row">
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                  <p class="fc-gray">Если у вас уже есть учетная запись, <a href="#" class="fc-blue" data-fancybox-close="">войдите</a></p>
+              </div>
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                  <p class="fz-small fc-gray tar">Поля, отмеченные <span class="fc-red">*</span>, обязательны для заполнения</p>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-4 col-sm-4 col-xs-12">
+                  <div class="custom-input">
+                      <label for="lastName">Фамилия <span class="fc-red">*</span></label>
+                      <input type="text" name="surname" id="lastName" required="">
+                  </div>
+              </div>
+              <div class="col-md-4 col-sm-4 col-xs-12">
+                  <div class="custom-input">
+                      <label for="fName">Имя<span class="fc-red">*</span></label>
+                      <input type="text" name="name" id="fName" required="">
+                  </div>
+              </div>
+              <div class="col-md-4 col-sm-4 col-xs-12">
+                  <div class="custom-input">
+                      <label for="patronymic">Отчество</label>
+                      <input type="text" name="patronymic" id="patronymic">
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-4 col-sm-4 col-xs-12">
+                  <div class="custom-input">
+                      <label for="index">Индекс</label>
+                      <input type="text" name="index" id="index">
+                  </div>
+              </div>
+              <div class="col-md-8 col-sm-8 col-xs-12">
+                  <div class="custom-input">
+                      <label for="post">Почтовый адрес</label>
+                      <input type="text" name="mailing_address" id="post">
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-4 col-sm-4 col-xs-12">
+                  <div class="custom-input">
+                      <label for="mail4">Электронная почта<span class="fc-red">*</span></label>
+                      <input type="text" name="email" id="mail4" required="">
+                  </div>
+              </div>
+              <div class="col-md-4 col-sm-4 col-xs-12">
+                  <div class="custom-input">
+                      <label for="phone">Телефон<span class="fc-red">*</span></label>
+                      <input type="text" name="phone" id="phone" required="">
+                  </div>
+              </div>
+              <div class="col-md-4 col-sm-4 col-xs-12">
+                  <div class="custom-input">
+                      <label for="region">Регион<span class="fc-red">*</span></label>
+                      <input type="text" name="region" id="region" required="">
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-4 col-sm-4 col-xs-12">
+                  <div class="custom-input">
+                      <label for="pass">Пароль<span class="fc-red">*</span></label>
+                      <input name="password" type="password" id="pass" required="">
+                  </div>
+              </div>
+              <div class="col-md-4 col-sm-4 col-xs-12">
+                  <div class="custom-input">
+                      <label for="passRepeat">Повторите пароль<span class="fc-red">*</span></label>
+                      <input name="password_confirmation" type="password" id="passRepeat" required="">
+                  </div>
+              </div>
+              <div class="col-md-4 col-sm-4 col-xs-12">
+                  <button class="button gold-button reg" type="submit">зарегистрироваться</button>
+              </div>
+          </div>
+      </form> -->
+    </div>
+  </div>
+  <div
+    class="modal-wrap recovery-password"
+    id="password-recovery"
+    style="display: none;"
+  >
+    <div class="modal-content">
+      <i class="gold-close" data-fancybox-close=""></i>
+      <h2>Восстановление пароля</h2>
+      <p class="fc-gray">
+        Введите адрес электронной почты, куда будет отправлена инструкция по
+        восстановлению пароля.
+      </p>
+      <!-- <form data-request="onRestorePassword" data-request-flash="" data-request-success="modalConfirmCodeActivation()">
+          <div class="custom-input">
+              <label for="mail3">Электронная почта</label>
+              <input name="email" type="email" id="mail3">
+          </div>
+          <div class="modal-control">
+              <button type="submit" class="button gold-button small dib">ОТПРАВИТЬ</button>
+          </div>
+      </form> -->
+    </div>
+  </div>
+  <div
+    class="modal-wrap recovery-password-confirm2"
+    id="password-recovery-confirm2"
+    style="display: none;"
+  >
+    <div class="modal-content">
+      <i class="gold-close" data-fancybox-close=""></i>
+      <h2>Проверьте электронную почту</h2>
+      <p class="fc-gray">
+        На ваш электронный адрес была отправлена инструкция по восстановлению
+        пароля.
+      </p>
+    </div>
+  </div>
+  <a
+    data-fancybox=""
+    data-src="#password-recovery-confirm2"
+    id="password-recovery-confirm2-click"
+    style="display: none;"
+  ></a>
+  <div class="header-top">
+    <div class="container">
+      <div class="topMenu-left">
+        <div class="topMenu-icon" id="open-mobileMenu">
+          <div class="topMenu-icon-line"></div>
+          <div class="topMenu-icon-line"></div>
+          <div class="topMenu-icon-line"></div>
+        </div>
+      </div>
+      <div class="topMenu-mid">
+        <nav class="topMenu-links">
+          <a href="/ministry" class="topMenu-link fc-white ttu">Министерство</a>
+          <a href="/activities" class="topMenu-link fc-white ttu"
+          >Деятельность</a
+          >
+          <a href="/documents" class="topMenu-link fc-white ttu">Документы</a>
+          <a href="/press-center" class="topMenu-link fc-white ttu"
+          >Пресс-центр</a
+          >
+          <a
+            href="/obrashcheniya-grazhdan"
+            class="topMenu-link fc-white ttu tabletNone"
+          >Обращения граждан</a
+          >
+          <a href="/contacts" class="topMenu-link fc-white ttu tabletNone"
+          >Контакты</a
+          >
+          <div class="tabletMenu">
+            <div class="tabletMenu-btn"></div>
+            <!-- <div class="tabletMenu-wrap">
+              <a href="/obrashcheniya-grazhdan" class="topMenu-link"
+                >обращения граждан</a
+              >
+              <a href="/contacts" class="topMenu-link">Контакты</a>
+            </div> -->
+          </div>
+        </nav>
+      </div>
+      <div class="topMenu-right">
+        <div class="topMenu-social">
+          <a
+            href="https://www.facebook.com/MintransRussia"
+            class="social-item fb"
+            target="_blank"
+          ></a>
+          <a
+            href="https://www.instagram.com/mintransrussia"
+            class="social-item inst"
+            target="_blank"
+          ></a>
+          <a
+            href="https://vk.com/mintransrussia"
+            class="social-item vk"
+            target="_blank"
+          ></a>
+          <a
+            href="https://twitter.com/MintransRF"
+            class="social-item twit"
+            target="_blank"
+          ></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="header-bottom header-bottom-jubilee">
+      <div class="header-bottom-left">
+        <a href="/" class="logo-h"></a>
+      </div>
+
+      <div class="header-bottom-right">
+        <div class="header-bottom-setting">
+          <a
+            data-fancybox=""
+            data-src="#authorization-modal"
+            class="setting-item"
+          >
+            <img
+              src="https://mintrans.gov.ru/themes/mintrans/assets/images/icons/user-icon.svg"
+              alt=""
+            /></a>
+          <a href="/eye" class="setting-item">
+            <img
+              src="https://mintrans.gov.ru/themes/mintrans/assets/images/icons/eye-ic.svg"
+              alt=""
+            />
+          </a>
+
+          <a
+            href="#"
+            class="setting-item"
+            data-request="onSwitchLocale"
+            data-request-data="locale: 'en'"
+            data-request-redirect="/"
+          >ENG</a
+          >
+        </div>
+      </div>
+
+      <!-- <form action="/search" class="header-bottom-mid">
+              <div class="custom-input search">
+                  <input name="value" type="text" placeholder="Поиск по сайту">
+                  <button class="custom-input-submit">
+                      <i></i>
+                  </button>
+              </div>
+          </form> -->
+    </div>
+  </div>
+</header>

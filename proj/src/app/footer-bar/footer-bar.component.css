@@ -1,0 +1,129 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+footer {
+  background-color: #333;
+  /* color: #fff; */
+  padding-top: 21px;
+  padding-bottom: 32px;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+footer {
+  display: block;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  margin: 0 auto;
+  font-size: 16px;
+}
+
+html {
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+html {
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0px 20px;
+}
+
+@media only screen and (min-width: 768px) .container {
+  width: 46rem;
+}
+
+  div {
+    display: block;
+  }
+
+  footer .footer-bottom {
+    /* letter-spacing: -5px; */
+  }
+
+  footer .footer-top .footer-menu {
+    letter-spacing: -5px;
+  }
+
+  footer .footer-top .footer-menu .footer-menu-link {
+    margin-bottom: 20px;
+  }
+
+  footer .footer-top .footer-menu-link:first-child {
+    padding-left: 0;
+  }
+
+  footer .footer-top .footer-menu-link {
+    padding: 4px 19px 4px 0;
+    margin-right: 19px;
+    border-right: 1px solid #cda973;
+    letter-spacing: 0px;
+    display: inline-block;
+  }
+  .fc-white {
+    color: #ffffff;
+  }
+
+  a {
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  footer .footer-bottom .footer-bottom-right {
+    letter-spacing: 0px;
+    display: inline-block;
+    width: 40%;
+    padding-left: 0;
+    text-align: center;
+    vertical-align: bottom;
+  }
+  @media (max-width: 1279px) footer .footer-bottom .footer-right-item {
+    width: 49%;
+  }
+
+    footer .footer-bottom .footer-right-item {
+      display: inline-block;
+      text-align: center;
+      font-size: 14px;
+      max-width: 191px;
+    }
+    a {
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    footer .footer-bottom .footer-sub-menu {
+      margin-bottom: 30px;
+    }
+    footer .footer-bottom .footer-sub-menu {
+      letter-spacing: -5px;
+    }
+
+    footer .footer-bottom .footer-subMenu-link:first-child {
+      padding-left: 0;
+    }
+    footer .footer-bottom .footer-subMenu-link {
+      letter-spacing: 0px;
+      border-right: 1px solid #fff;
+      padding: 0px 8px;
+    }

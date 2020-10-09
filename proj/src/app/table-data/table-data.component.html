@@ -1,0 +1,206 @@
+<div>
+  <dx-data-grid
+    id="gridContainer"
+    [dataSource]="districts"
+    [masterDetail]="{ enabled: true, template: 'detail' }"
+    keyExpr="REGION_ID"
+    [showBorders]="true"
+    [allowColumnReordering]="true"
+  >
+    <dxo-editing
+      [allowUpdating]="false"
+      [allowAdding]="true"
+      [allowDeleting]="true"
+      mode="form"
+    ></dxo-editing>
+    <dxi-column
+      dataField="REGION_ID"
+      caption="№"
+      [width]="80"
+      alignment="left"
+    ></dxi-column>
+    <dxi-column
+      dataField="REGION_NAME"
+      [width]="300"
+      caption="ФО РФ"
+      alignment="left"
+    ></dxi-column>
+
+    <dxi-column caption="Мужчины" alignment="left">
+      <dxi-column
+        dataField="VALUE_MEN_KID"
+        caption="0-18"
+        alignment="left"
+      ></dxi-column>
+      <dxi-column
+        dataField="VALUE_MEN_ADULT"
+        caption="18-60"
+        alignment="left"
+      ></dxi-column>
+      <dxi-column
+        dataField="VALUE_MEN_SENIOR"
+        caption="60+"
+        alignment="left"
+      ></dxi-column>
+    </dxi-column>
+
+    <dxi-column caption="Женщины" alignment="left">
+      <dxi-column
+        dataField="VALUE_WOMEN_KID"
+        caption="0-18"
+        alignment="left"
+      ></dxi-column>
+      <dxi-column
+        dataField="VALUE_WOMEN_ADULT"
+        caption="18-60"
+        alignment="left"
+      ></dxi-column>
+      <dxi-column
+        dataField="VALUE_WOMEN_SENIOR"
+        caption="60+"
+        alignment="left"
+      ></dxi-column>
+    </dxi-column>
+
+    <dxi-column
+      [calculateCellValue]="calculateSalesAmount"
+      caption="Итого"
+      alignment="left"
+    ></dxi-column>
+
+    <div *dxTemplate="let districts of 'detail'">
+      <div class="master-detail-caption">
+        {{"Данные по регионам: " + districts.data.REGION_NAME}}
+      </div>
+
+      <dx-data-grid
+        [dataSource]="getRegions(districts.key)"
+        [showBorders]="true"
+        [columnAutoWidth]="true"
+        [masterDetail]="{ enabled: true, template: 'detail2' }"
+        keyExpr="REGION_ID"
+        [allowColumnReordering]="true"
+      >
+        <dxo-editing
+          [allowUpdating]="false"
+          [allowAdding]="true"
+          [allowDeleting]="true"
+          mode="form"
+        ></dxo-editing>
+        <dxi-column dataField="REGION_ID" caption="№" [width]="80"></dxi-column>
+
+        <dxi-column
+          dataField="REGION_NAME"
+          caption="Регион РФ"
+          alignment="left"
+        ></dxi-column>
+
+        <dxi-column caption="Мужчины" alignment="left">
+          <dxi-column dataField="VALUE_MEN_KID" caption="0-18"></dxi-column>
+          <dxi-column dataField="VALUE_MEN_ADULT" caption="18-60"></dxi-column>
+          <dxi-column
+            dataField="VALUE_MEN_SENIOR"
+            dataType="data"
+            caption="60+"
+          ></dxi-column>
+        </dxi-column>
+
+        <dxi-column caption="Женщины" alignment="left">
+          <dxi-column
+            dataField="VALUE_WOMEN_KID"
+            dataType="data"
+            caption="0-18"
+          ></dxi-column>
+          <dxi-column
+            dataField="VALUE_WOMEN_ADULT"
+            dataType="data"
+            caption="18-60"
+          ></dxi-column>
+          <dxi-column
+            dataField="VALUE_WOMEN_SENIOR"
+            dataType="data"
+            caption="60+"
+          ></dxi-column>
+        </dxi-column>
+
+        <dxi-column
+          [calculateCellValue]="calculateSalesAmount"
+          dataType="data"
+          caption="Итого"
+        ></dxi-column>
+
+        <div *dxTemplate="let regions of 'detail2'">
+          <div class="master-detail-caption">
+            {{"Данные по перевозкам в регионе: " + regions.data.REGION_NAME}}
+          </div>
+          <dx-data-grid
+            [dataSource]="getRoutes(regions.key)"
+            [showBorders]="true"
+            [columnAutoWidth]="true"
+            [allowColumnReordering]="true"
+          >
+            <dxo-editing
+              [allowUpdating]="true"
+              [allowAdding]="true"
+              [allowDeleting]="true"
+              mode="cell"
+            >
+            </dxo-editing>
+
+            <dxi-column dataField="ID" caption="№"></dxi-column>
+            <dxi-column dataField="CITY_FROM" caption="Откуда"></dxi-column>
+
+            <dxi-column dataField="CITY_TO" caption="Куда"></dxi-column>
+
+            <dxi-column caption="Мужчины" alignment="left">
+              <dxi-column
+                dataField="VALUE_MEN_KID"
+                dataType="data"
+                caption="0-18"
+                [allowEditing]="true"
+              ></dxi-column>
+
+              <dxi-column
+                dataField="VALUE_MEN_ADULT"
+                dataType="data"
+                caption="18-60"
+              ></dxi-column>
+
+              <dxi-column
+                dataField="VALUE_MEN_SENIOR"
+                dataType="data"
+                caption="60+"
+              ></dxi-column>
+            </dxi-column>
+
+            <dxi-column caption="Женщины" alignment="left">
+              <dxi-column
+                dataField="VALUE_WOMEN_KID"
+                dataType="data"
+                caption="0-18"
+              ></dxi-column>
+
+              <dxi-column
+                dataField="VALUE_WOMEN_ADULT"
+                dataType="data"
+                caption="18-60"
+              ></dxi-column>
+
+              <dxi-column
+                dataField="VALUE_WOMEN_SENIOR"
+                dataType="data"
+                caption="60+"
+              ></dxi-column>
+            </dxi-column>
+
+            <dxi-column
+              [calculateCellValue]="calculateSalesAmount"
+              dataType="data"
+              caption="Итого"
+            ></dxi-column>
+          </dx-data-grid>
+        </div>
+      </dx-data-grid>
+    </div>
+  </dx-data-grid>
+</div>

@@ -1,0 +1,16 @@
+::ng-deep #gridContainer {
+  height: auto;
+}
+::ng-deep .master-detail-caption {
+  padding: 0 0 5px 10px;
+  font-size: 12 px;
+  font-weight: bold;
+}
+
+* {
+  font-family: "Roboto", Arial, sans-serif;
+  color: #616161;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
