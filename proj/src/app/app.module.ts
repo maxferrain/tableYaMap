@@ -9,6 +9,7 @@ import {DxButtonModule, DxDataGridModule, DxTemplateModule} from 'devextreme-ang
 import {ReactiveFormsModule} from '@angular/forms';
 import { TableDataComponent } from './table-data/table-data.component';
 import { YandexMapsComponent } from './yandex-maps/yandex-maps.component';
+import { MapsTestComponent } from './maps-test/maps-test.component';
 
 
 const mapConfig: IConfig = {
@@ -22,7 +23,8 @@ const mapConfig: IConfig = {
     HeaderBarComponent,
     FooterBarComponent,
     TableDataComponent,
-    YandexMapsComponent
+    YandexMapsComponent,
+    MapsTestComponent
   ],
   imports: [
     BrowserModule,
