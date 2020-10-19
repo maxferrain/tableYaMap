@@ -62,8 +62,10 @@
       ></dxi-column>
     </dxi-column>
 
+    <!--      [calculateCellValue]="calculateSalesAmount"-->
     <dxi-column
-      [calculateCellValue]="calculateSalesAmount"
+
+    dataField="VALUE_SUM"
       caption="Итого"
       alignment="left"
     ></dxi-column>
@@ -122,9 +124,10 @@
             caption="60+"
           ></dxi-column>
         </dxi-column>
-
+<!--        [calculateCellValue]="calculateSalesAmount"-->
         <dxi-column
-          [calculateCellValue]="calculateSalesAmount"
+
+          dataField="VALUE_SUM"
           dataType="data"
           caption="Итого"
         ></dxi-column>
@@ -192,9 +195,9 @@
                 caption="60+"
               ></dxi-column>
             </dxi-column>
-
+<!--            [calculateCellValue]="calculateSalesAmount"-->
             <dxi-column
-              [calculateCellValue]="calculateSalesAmount"
+              dataField="VALUE_SUM"
               dataType="data"
               caption="Итого"
             ></dxi-column>

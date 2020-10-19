@@ -69,9 +69,9 @@ export class TableDataComponent implements OnInit {
         dataSourceInstance: new DataSource({
           store: new ArrayStore({
             data: this.routes,
-            key: "ID"
+            key: 'ID'
           }),
-          filter: ["PARENT_REGION_ID", "=", key]
+          filter: ['PARENT_REGION_ID', '=', key]
         })
       };
       this.routesDataSourceStorage.push(item);
@@ -81,16 +81,17 @@ export class TableDataComponent implements OnInit {
     return item.dataSourceInstance;
   }
 
-  calculateSalesAmount(rowData) {
-    return (
-      Number(rowData.VALUE_MEN_KID) +
-      Number(rowData.VALUE_MEN_ADULT) +
-      Number(rowData.VALUE_MEN_SENIOR) +
-      Number(rowData.VALUE_WOMEN_ADULT) +
-      Number(rowData.VALUE_WOMEN_KID) +
-      Number(rowData.VALUE_WOMEN_SENIOR)
-    );
-  }
+  // tslint:disable-next-line:typedef
+  // calculateSalesAmount(rowData) {
+  //   return (
+  //     Number(rowData.VALUE_MEN_KID) +
+  //     Number(rowData.VALUE_MEN_ADULT) +
+  //     Number(rowData.VALUE_MEN_SENIOR) +
+  //     Number(rowData.VALUE_WOMEN_ADULT) +
+  //     Number(rowData.VALUE_WOMEN_KID) +
+  //     Number(rowData.VALUE_WOMEN_SENIOR)
+  //   );
+  // }
 
 
   ngOnInit(): void {
