@@ -16,42 +16,43 @@ export class TableDataComponent implements OnInit {
   districts: District[];
   regions: Region[];
   routes: Route[];
-  summRoutes: Route[];
-
-  summRoutesForRegion: Route[];
+  // summRoutes: Route[];
+  //
+  // summRoutesForRegion: Route[];
 
   regionsDataSourceStorage: any;
   routesDataSourceStorage: any;
 
   constructor(private service: Service) {
-    // service.countRouForReg();
 
     this.districts = service.getDistricts();
     this.regions = service.getRegions();
     this.routes = service.getRoutes();
 
-    this.summRoutes = service.getRoutes();
-    this.summRoutesForRegion = service.getRoutes();
+    // this.summRoutes = service.getRoutes();
+    // this.summRoutesForRegion = service.getRoutes();
 
     this.regionsDataSourceStorage = [];
     this.routesDataSourceStorage = [];
   }
 
-  completedValue(rowData) {
-    return rowData.Status === "Completed";
-  }
+  // tslint:disable-next-line:typedef
+  // completedValue(rowData) {
+  //   return rowData.Status === 'Completed';
+  // }
 
+  // tslint:disable-next-line:typedef
   getRegions(key) {
     let item = this.regionsDataSourceStorage.find((i) => i.key === key);
     if (!item) {
       item = {
-        key: key,
+        key,
         dataSourceInstance: new DataSource({
           store: new ArrayStore({
             data: this.regions,
-            key: "REGION_ID"
+            key: 'REGION_ID'
           }),
-          filter: ["PARENT_REGION_ID", "=", key]
+          filter: ['PARENT_REGION_ID', '=', key]
         })
       };
       this.regionsDataSourceStorage.push(item);
@@ -65,7 +66,7 @@ export class TableDataComponent implements OnInit {
     let item = this.routesDataSourceStorage.find((i) => i.key === key);
     if (!item) {
       item = {
-        key: key,
+        key,
         dataSourceInstance: new DataSource({
           store: new ArrayStore({
             data: this.routes,

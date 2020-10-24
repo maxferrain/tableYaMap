@@ -25,6 +25,7 @@ export class Region {
   VALUE_MEN_ADULT: string;
   VALUE_MEN_SENIOR: string;
   REGION_NAME: string;
+  ISO: string;
 }
 
 export class Route {
@@ -44,7 +45,7 @@ export class Route {
   CITY_TO: string;
 }
 
-const districts: District[] = [
+var districts: District[] = [
   {
     REGION_ID: '9000001',
     VALUE_SUM: '0',
@@ -151,7 +152,7 @@ const districts: District[] = [
   }
 ];
 
-const regions: Region[] = [
+var regions: Region[] = [
   {
     REGION_ID: '1209975',
     PARENT_REGION_ID: '9000001',
@@ -162,7 +163,8 @@ const regions: Region[] = [
     VALUE_MEN_KID: '99999999',
     VALUE_MEN_ADULT: '655',
     VALUE_MEN_SENIOR: '383',
-    REGION_NAME: 'Москва'
+    REGION_NAME: 'Москва',
+    ISO: 'RU-MOW'
   },
   {
     REGION_ID: '1210475',
@@ -174,7 +176,8 @@ const regions: Region[] = [
     VALUE_MEN_KID: '0',
     VALUE_MEN_ADULT: '0',
     VALUE_MEN_SENIOR: '0',
-    REGION_NAME: 'Московская область'
+    REGION_NAME: 'Московская область',
+    ISO: 'RU-MOS'
   },
   {
     REGION_ID: '1171031',
@@ -186,7 +189,8 @@ const regions: Region[] = [
     VALUE_MEN_KID: '1111111',
     VALUE_MEN_ADULT: '55',
     VALUE_MEN_SENIOR: '23',
-    REGION_NAME: 'Тверская область'
+    REGION_NAME: 'Тверская область',
+    ISO: 'RU-TVE'
   },
   {
     REGION_ID: '1181365',
@@ -198,7 +202,8 @@ const regions: Region[] = [
     VALUE_MEN_KID: '0',
     VALUE_MEN_ADULT: '0',
     VALUE_MEN_SENIOR: '0',
-    REGION_NAME: 'Калужская область'
+    REGION_NAME: 'Калужская область',
+    ISO: 'RU-KLU'
   },
   {
     REGION_ID: '1262864',
@@ -210,7 +215,8 @@ const regions: Region[] = [
     VALUE_MEN_KID: '0',
     VALUE_MEN_ADULT: '0',
     VALUE_MEN_SENIOR: '0',
-    REGION_NAME: 'Смоленская область'
+    REGION_NAME: 'Смоленская область',
+    ISO: 'RU-SMO'
   },
   {
     REGION_ID: '1120524',
@@ -222,7 +228,8 @@ const regions: Region[] = [
     VALUE_MEN_KID: '0',
     VALUE_MEN_ADULT: '0',
     VALUE_MEN_SENIOR: '0',
-    REGION_NAME: 'Краснодарский край'
+    REGION_NAME: 'Краснодарский край',
+    ISO: 'RU-KDA'
   },
   {
     REGION_ID: '1143778',
@@ -234,7 +241,8 @@ const regions: Region[] = [
     VALUE_MEN_KID: '0',
     VALUE_MEN_ADULT: '0',
     VALUE_MEN_SENIOR: '0',
-    REGION_NAME: 'Волгоградская область'
+    REGION_NAME: 'Волгоградская область',
+    ISO: 'RU-VGG'
   },
   {
     REGION_ID: '2200002',
@@ -246,7 +254,8 @@ const regions: Region[] = [
     VALUE_MEN_KID: '122',
     VALUE_MEN_ADULT: '261',
     VALUE_MEN_SENIOR: '137',
-    REGION_NAME: 'Республика Крым'
+    REGION_NAME: 'Республика Крым',
+    ISO: 'RU-KRU'
   },
   {
     REGION_ID: '2200003',
@@ -258,7 +267,8 @@ const regions: Region[] = [
     VALUE_MEN_KID: '145',
     VALUE_MEN_ADULT: '360',
     VALUE_MEN_SENIOR: '139',
-    REGION_NAME: 'Севастополь'
+    REGION_NAME: 'Севастополь',
+    ISO: 'RU-SEV'
   },
   {
     REGION_ID: '1249220',
@@ -270,7 +280,8 @@ const regions: Region[] = [
     VALUE_MEN_KID: '0',
     VALUE_MEN_ADULT: '0',
     VALUE_MEN_SENIOR: '0',
-    REGION_NAME: 'Ростовская область'
+    REGION_NAME: 'Ростовская область',
+    ISO: 'RU-ROS'
   },
   {
     REGION_ID: '1203936',
@@ -282,7 +293,8 @@ const regions: Region[] = [
     VALUE_MEN_KID: '210',
     VALUE_MEN_ADULT: '490',
     VALUE_MEN_SENIOR: '265',
-    REGION_NAME: 'Санкт-Петербург'
+    REGION_NAME: 'Санкт-Петербург',
+    ISO: 'RU-SPE'
   },
   {
     REGION_ID: '1204092',
@@ -294,7 +306,8 @@ const regions: Region[] = [
     VALUE_MEN_KID: '0',
     VALUE_MEN_ADULT: '0',
     VALUE_MEN_SENIOR: '0',
-    REGION_NAME: 'Ленинградская область'
+    REGION_NAME: 'Ленинградская область',
+    ISO: 'RU-LEN'
   },
   {
     REGION_ID: '1300033',
@@ -306,7 +319,8 @@ const regions: Region[] = [
     VALUE_MEN_KID: '92',
     VALUE_MEN_ADULT: '265',
     VALUE_MEN_SENIOR: '60',
-    REGION_NAME: 'Республика Карелия'
+    REGION_NAME: 'Республика Карелия',
+    ISO: 'RU-KR'
   },
   {
     REGION_ID: '1217738',
@@ -318,7 +332,8 @@ const regions: Region[] = [
     VALUE_MEN_KID: '0',
     VALUE_MEN_ADULT: '0',
     VALUE_MEN_SENIOR: '0',
-    REGION_NAME: 'Мурманская область'
+    REGION_NAME: 'Мурманская область',
+    ISO: 'RU-MUR'
   },
   {
     REGION_ID: '1217915',
@@ -330,7 +345,8 @@ const regions: Region[] = [
     VALUE_MEN_KID: '0',
     VALUE_MEN_ADULT: '0',
     VALUE_MEN_SENIOR: '0',
-    REGION_NAME: 'Новгородская область'
+    REGION_NAME: 'Новгородская область',
+    ISO: 'RU-NGR'
   }
 ];
 
@@ -710,6 +726,7 @@ export class Service {
 
     return regions;
   }
+  // tslint:disable-next-line:typedef
   getRoutes() {
     return routes;
   }
