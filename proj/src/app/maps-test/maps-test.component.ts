@@ -281,15 +281,17 @@ export class MapsTestComponent implements OnInit {
       map.panes.append('white', pane);
       // Зададим цвета федеральных округов.
       const districtColors = {
-        cfo: '#ffff6f',
-        szfo: '#54cbba',
-        yfo: '#f9768e',
-        skfo: '#9a5597',
-        pfo: '#30cb05',
-        urfo: '#bac1cc',
-        sfo: '#16acdb',
-        dfo: '#fbc520'
+        cfo: 'rgba(243,243,104,0.99)',
+        szfo: 'rgba(84,203,186,0.98)',
+        yfo: 'rgba(249,118,142,0.99)',
+        skfo: 'rgba(154,85,151,0.98)',
+        pfo: 'rgba(48,203,5,0.99)',
+        urfo: 'rgba(186,193,204,0.98)',
+        sfo: 'rgba(22,172,219,0.99)',
+        dfo: 'rgba(251,197,32,0.99)'
       };
+
+      // '#54cbba',
       // Зададим подсказки при наведении на федеральный округ.
       const districtsHints = {
         cfo: 'ЦФО = ' + sumReg[0].VALUE_SUM ,
@@ -319,38 +321,54 @@ export class MapsTestComponent implements OnInit {
         // Для каждого федерального округа создадим коллекцию.
         // tslint:disable-next-line:forin
         for (const district in districtColors) {
+          console.log(districtColors[district]);
           districtCollections[district] = new ymaps.GeoObjectCollection(null, {
             fillColor: districtColors[district],
             strokeColor: districtColors[district],
-            strokeOpacity: 0.3,
+            strokeOpacity: 0.5,
             fillOpacity: 0.3,
             hintCloseTimeout: 0,
             hintOpenTimeout: 0
           });
+
+          // console.log(districtColors[district]);
           // Создадим свойство в коллекции, которое позже наполним названиями субъектов РФ.
-          districtCollections[district].properties.districts = [];
+          // districtCollections[district].properties.districts = [];
           districtCollections[district].properties.summas = [];
+          districtCollections[district].properties.regColors = [];
         }
+
+
 
         // tslint:disable-next-line:only-arrow-functions typedef
         result.features.forEach(function(feature) {
+
           const iso = feature.properties.iso3166;
           const name = feature.properties.name;
 
+
+
           const district = districtByIso[iso];
           const summa = infoReg[iso];
+
 
           // Для каждого субъекта РФ зададим подсказку с названием федерального округа, которому он принадлежит.
           feature.properties.hintContent = districtsHints[district];
           feature.properties.summRegion = summa;
 
+          // console.log(feature.properties.hintContent);
+
+          // console.log(districtCollections[district].optrions);
           // Добавим субъект РФ в соответствующую коллекцию.
           districtCollections[district].add(new ymaps.GeoObject(feature));
+
+          console.log(districtCollections['szfo']);
 
           // Добавим имя субъекта РФ в массив.
           // districtCollections[district].properties.districts.push(name);
           districtCollections[district].properties.summas.push(name+ " = "+ summa);
 
+          // console.log(feature.properties);
         });
         // Создадим переменную, в которую будем сохранять выделенный в данный момент федеральный округ.
         let highlightedDistrict;
@@ -363,7 +381,11 @@ export class MapsTestComponent implements OnInit {
             'mouseenter', function(event)
             {
               const district = event.get('target').getParent();
-              district.options.set({fillOpacity: 1});
+              district.options.set({
+                fillOpacity: 1
+                // outline: 1,
+                // strokeWidth:1
+              });
             }
           );
           // При выводе курсора за пределы объекта вернем опции по умолчанию.

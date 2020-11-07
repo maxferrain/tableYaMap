@@ -1,18 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="145f9fe4-a465-4bf5-8131-7fa049369cf5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/proj/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/proj/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proj/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/proj/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proj/src/app/table-data/table-data.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/proj/src/app/table-data/table-data.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proj/src/app/table-data/table-data.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/proj/src/app/table-data/table-data.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proj/src/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/proj/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/proj/src/index.html" afterDir="false" />
+    <list default="true" id="145f9fe4-a465-4bf5-8131-7fa049369cf5" name="Default Changelist" comment="summ information for regions added">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proj/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/proj/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proj/src/app/header-bar/header-bar.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/proj/src/app/header-bar/header-bar.component1.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proj/src/app/header-bar/header-bar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/proj/src/app/header-bar/header-bar.component1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proj/src/app/header-bar/header-bar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/proj/src/app/header-bar/header-bar.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proj/src/app/maps-test/maps-test.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/proj/src/app/maps-test/maps-test.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -23,9 +49,11 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -34,6 +62,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/proj/node_modules/typescript/lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
     <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -52,6 +81,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -64,30 +94,68 @@
       <updated>1602325454647</updated>
       <workItem from="1602325458783" duration="2076000" />
       <workItem from="1603538715073" duration="1989000" />
-      <workItem from="1603550123359" duration="13058000" />
+      <workItem from="1603550123359" duration="13314000" />
+      <workItem from="1603877503187" duration="122000" />
+      <workItem from="1603877631267" duration="443000" />
+      <workItem from="1603878079638" duration="5603000" />
+      <workItem from="1604334904417" duration="6059000" />
+      <workItem from="1604570817146" duration="1087000" />
+      <workItem from="1604761217151" duration="363000" />
     </task>
+    <task id="LOCAL-00001" summary="summ information for regions added">
+      <created>1603575323661</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1603575323661</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="summ information for regions added" />
+    <option name="LAST_COMMIT_MESSAGE" value="summ information for regions added" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1419" height="165" key="GridCell.Tab.0.bottom" timestamp="1603557499084">
+    <state width="1419" height="165" key="GridCell.Tab.0.bottom" timestamp="1604747527920">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="165" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1603557499084" />
-    <state width="1419" height="165" key="GridCell.Tab.0.center" timestamp="1603557499083">
+    <state width="1419" height="165" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1604747527920" />
+    <state width="1419" height="165" key="GridCell.Tab.0.center" timestamp="1604747527918">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="165" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1603557499083" />
-    <state width="1419" height="165" key="GridCell.Tab.0.left" timestamp="1603557499082">
+    <state width="1419" height="165" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1604747527918" />
+    <state width="1419" height="165" key="GridCell.Tab.0.left" timestamp="1604747527917">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="165" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1603557499082" />
-    <state width="1419" height="165" key="GridCell.Tab.0.right" timestamp="1603557499084">
+    <state width="1419" height="165" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1604747527917" />
+    <state width="1419" height="165" key="GridCell.Tab.0.right" timestamp="1604747527919">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="165" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1603557499084" />
+    <state width="1419" height="165" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1604747527919" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1603575338236">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1603575338236" />
+    <state x="508" y="371" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603877645465">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="508" y="371" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1603877645465" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -95,7 +163,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/proj/src/app/maps-test/maps-test.component.ts</url>
           <line>93</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
