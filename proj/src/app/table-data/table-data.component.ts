@@ -4,6 +4,7 @@ import DataSource from 'devextreme/data/data_source';
 import ArrayStore from 'devextreme/data/array_store';
 
 
+
 @Component({
   selector: 'app-table-data',
   templateUrl: './table-data.component.html',
@@ -29,17 +30,10 @@ export class TableDataComponent implements OnInit {
     this.regions = service.getRegions();
     this.routes = service.getRoutes();
 
-    // this.summRoutes = service.getRoutes();
-    // this.summRoutesForRegion = service.getRoutes();
-
     this.regionsDataSourceStorage = [];
     this.routesDataSourceStorage = [];
   }
 
-  // tslint:disable-next-line:typedef
-  // completedValue(rowData) {
-  //   return rowData.Status === 'Completed';
-  // }
 
   // tslint:disable-next-line:typedef
   getRegions(key) {

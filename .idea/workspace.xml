@@ -22,10 +22,12 @@
     <list default="true" id="145f9fe4-a465-4bf5-8131-7fa049369cf5" name="Default Changelist" comment="summ information for regions added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/proj/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/proj/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proj/src/app/header-bar/header-bar.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/proj/src/app/header-bar/header-bar.component1.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proj/src/app/header-bar/header-bar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/proj/src/app/header-bar/header-bar.component1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proj/src/app/header-bar/header-bar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/proj/src/app/header-bar/header-bar.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proj/src/app/maps-test/maps-test.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/proj/src/app/maps-test/maps-test.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/proj/src/app/maps-test/maps-test.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/proj/src/app/maps-test/maps-test.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proj/src/app/table-data/table-data.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/proj/src/app/table-data/table-data.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proj/src/app/table-data/table-data.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/proj/src/app/table-data/table-data.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proj/src/app/table-data/table-data.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/proj/src/app/table-data/table-data.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proj/src/app/table-data/table-data.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/proj/src/app/table-data/table-data.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +102,10 @@
       <workItem from="1603878079638" duration="5603000" />
       <workItem from="1604334904417" duration="6059000" />
       <workItem from="1604570817146" duration="1087000" />
-      <workItem from="1604761217151" duration="363000" />
+      <workItem from="1604761217151" duration="5624000" />
+      <workItem from="1604768412715" duration="4177000" />
+      <workItem from="1604996695641" duration="733000" />
+      <workItem from="1605018846585" duration="13055000" />
     </task>
     <task id="LOCAL-00001" summary="summ information for regions added">
       <created>1603575323661</created>
@@ -109,7 +114,21 @@
       <option name="project" value="LOCAL" />
       <updated>1603575323661</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="summ information for regions added">
+      <created>1604762012036</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1604762012036</updated>
+    </task>
+    <task id="LOCAL-00003" summary="summ information for regions added">
+      <created>1604762025696</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1604762025696</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,40 +151,29 @@
     <option name="LAST_COMMIT_MESSAGE" value="summ information for regions added" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1419" height="165" key="GridCell.Tab.0.bottom" timestamp="1604747527920">
+    <state width="1419" height="165" key="GridCell.Tab.0.bottom" timestamp="1605113671964">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="165" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1604747527920" />
-    <state width="1419" height="165" key="GridCell.Tab.0.center" timestamp="1604747527918">
+    <state width="1419" height="165" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1605113671964" />
+    <state width="1419" height="165" key="GridCell.Tab.0.center" timestamp="1605113671962">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="165" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1604747527918" />
-    <state width="1419" height="165" key="GridCell.Tab.0.left" timestamp="1604747527917">
+    <state width="1419" height="165" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1605113671962" />
+    <state width="1419" height="165" key="GridCell.Tab.0.left" timestamp="1605113671960">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="165" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1604747527917" />
-    <state width="1419" height="165" key="GridCell.Tab.0.right" timestamp="1604747527919">
+    <state width="1419" height="165" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1605113671960" />
+    <state width="1419" height="165" key="GridCell.Tab.0.right" timestamp="1605113671963">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="165" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1604747527919" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1603575338236">
+    <state width="1419" height="165" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1605113671963" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1604762037379">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1603575338236" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1604762037379" />
     <state x="508" y="371" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603877645465">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="508" y="371" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1603877645465" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/proj/src/app/maps-test/maps-test.component.ts</url>
-          <line>93</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

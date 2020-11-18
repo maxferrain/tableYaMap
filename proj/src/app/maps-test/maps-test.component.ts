@@ -96,41 +96,65 @@ const sumReg = [
     REGION_ID: '9000001',
     VALUE_SUM: '0',
     REGION_NAME: 'Центральный федеральный округ',
+    SHORT_NAME: 'cfo',
+    HUE: 60,
+    LIGHTNESS: 0.72,
   },
   {
     REGION_ID: '9000002',
     VALUE_SUM: '0',
     REGION_NAME: 'Южный федеральный округ',
+    SHORT_NAME: 'yfo',
+    HUE: 171,
+    LIGHTNESS: 0.56,
   },
   {
     REGION_ID: '9000003',
     VALUE_SUM: '0',
     REGION_NAME: 'Северо-Западный федеральный округ',
+    SHORT_NAME: 'szfo',
+    HUE: 349,
+    LIGHTNESS: 0.72,
   },
   {
     REGION_ID: '9000004',
     VALUE_SUM: '0',
     REGION_NAME: 'Дальневосточный федеральный округ',
+    SHORT_NAME: 'dfo',
+    HUE: 303,
+    LIGHTNESS: 0.47,
   },
   {
     REGION_ID: '9000005',
     VALUE_SUM: '0',
     REGION_NAME: 'Сибирский федеральный округ',
+    SHORT_NAME: 'sfo',
+    HUE: 107,
+    LIGHTNESS: 0.41,
   },
   {
     REGION_ID: '9000006',
     VALUE_SUM: '0',
     REGION_NAME: 'Уральский федеральный округ',
+    SHORT_NAME: 'ufo',
+    HUE: 217,
+    LIGHTNESS: 0.76,
   },
   {
     REGION_ID: '9000007',
     VALUE_SUM: '0',
     REGION_NAME: 'Приволжский федеральный округ',
+    SHORT_NAME: 'pfo',
+    HUE: 194,
+    LIGHTNESS: 0.47,
   },
   {
     REGION_ID: '9000008',
     VALUE_SUM: '0',
     REGION_NAME: 'Северо-Кавказский федеральный округ',
+    SHORT_NAME: 'skfo',
+    HUE: 45,
+    LIGHTNESS: 0.55,
   }
 ];
 
@@ -222,6 +246,106 @@ const infoReg = {
   'RU-CHU': '0'
 };
 
+const maxDistricts = {
+  cfo: 0,
+  szfo: 0,
+  yfo: 0,
+  skfo: 0,
+  pfo: 0,
+  urfo: 0,
+  sfo: 0,
+  dfo: 0,
+}
+
+const colorsReg = {
+  'RU-BEL':  '0',
+  'RU-BRY': '0',
+  'RU-VLA': '0',
+  'RU-VOR': '0',
+  'RU-IVA': '0',
+  'RU-KLU': '0',
+  'RU-KOS': '0',
+  'RU-KRS': '0',
+  'RU-LIP': '0',
+  'RU-MOS': '0',
+  'RU-MOW': '0',
+  'RU-ORL': '0',
+  'RU-RYA': '0',
+  'RU-SMO': '0',
+  'RU-TAM': '0',
+  'RU-TVE': '0',
+  'RU-TUL': '0',
+  'RU-YAR': '0',
+  'RU-ARK': '0',
+  'RU-VLG': '0',
+  'RU-KGD': '0',
+  'RU-KR': '0',
+  'RU-KO': '0',
+  'RU-LEN': '0',
+  'RU-MUR': '0',
+  'RU-NEN': '0',
+  'RU-NGR': '0',
+  'RU-PSK': '0',
+  'RU-SPE': '0',
+  'RU-AD': '0',
+  'RU-AST': '0',
+  'RU-VGG': '0',
+  'RU-KL': '0',
+  'RU-KDA': '0',
+  'RU-SEV': '0',
+  'RU-KRY': '0',
+  'RU-ROS': '0',
+  'RU-DA': '0',
+  'RU-IN': '0',
+  'RU-KB': '0',
+  'RU-KC': '0',
+  'RU-SE': '0',
+  'RU-STA': '0',
+  'RU-CE': '0',
+  'RU-BA': '0',
+  'RU-KIR': '0',
+  'RU-ME': '0',
+  'RU-MO': '0',
+  'RU-NIZ': '0',
+  'RU-ORE': '0',
+  'RU-PNZ': '0',
+  'RU-PER': '0',
+  'RU-SAM': '0',
+  'RU-SAR': '0',
+  'RU-TA': '0',
+  'RU-UD': '0',
+  'RU-ULY': '0',
+  'RU-CU': '0',
+  'RU-KGN': '0',
+  'RU-SVE': '0',
+  'RU-TYU': '0',
+  'RU-KHM': '0',
+  'RU-CHE': '0',
+  'RU-YAN': '0',
+  'RU-ALT': '0',
+  'RU-AL': '0',
+  'RU-BU': '0',
+  'RU-ZAB': '0',
+  'RU-IRK': '0',
+  'RU-KEM': '0',
+  'RU-KYA': '0',
+  'RU-NVS': '0',
+  'RU-OMS': '0',
+  'RU-TOM': '0',
+  'RU-TY': '0',
+  'RU-KK': '0',
+  'RU-AMU': '0',
+  'RU-YEV': '0',
+  'RU-KAM': '0',
+  'RU-MAG': '0',
+  'RU-PRI': '0',
+  'RU-SA': '0',
+  'RU-SAK': '0',
+  'RU-KHA': '0',
+  'RU-CHU': '0'
+};
+
+
 
 @Component({
   selector: 'app-maps-test',
@@ -243,6 +367,41 @@ export class MapsTestComponent implements OnInit {
   ngOnInit() {
 
     // tslint:disable-next-line:forin
+
+    function hslToHex(h, s, l) {
+      if(isNaN(s)) s = 0;
+      console.log(h,s,l);
+      h /= 360;
+      // s /= 100;
+      // l /= 100;
+      let r, g, b;
+      if (s === 0) {
+        r = g = b = l; // achromatic
+      } else {
+        const hue2rgb = (p, q, t) => {
+          if (t < 0) t += 1;
+          if (t > 1) t -= 1;
+          if (t < 1 / 6) return p + (q - p) * 6 * t;
+          if (t < 1 / 2) return q;
+          if (t < 2 / 3) return p + (q - p) * (2 / 3 - t) * 6;
+          return p;
+        };
+        const q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+        const p = 2 * l - q;
+        r = hue2rgb(p, q, h + 1 / 3);
+        g = hue2rgb(p, q, h);
+        b = hue2rgb(p, q, h - 1 / 3);
+      }
+      const toHex = x => {
+        const hex = Math.round(x * 255).toString(16);
+        return hex.length === 1 ? '0' + hex : hex;
+      };
+      let res = '#'+`${toHex(r)}${toHex(g)}${toHex(b)}`;
+      // console.log(res);
+      return res;
+    }
+
+
     for (let i in sumReg) {
       for(let j in this.districtssum){
         if(Number(sumReg[i].REGION_ID) === Number(this.districtssum[j].REGION_ID)){
@@ -255,11 +414,43 @@ export class MapsTestComponent implements OnInit {
       for (let j in this.regionsum) {
         // alert(i);
         if (i === this.regionsum[j].ISO) {
-          infoReg[i] = this.regionsum[j].VALUE_SUM;
+          infoReg[i] = Number(this.regionsum[j].VALUE_SUM);
         }
       }
     }
 
+    for(let k in districtByIso) {
+      for (let i in maxDistricts) {
+          for (let j in infoReg) {
+            if(i == districtByIso[k] && j == k && maxDistricts[i] < infoReg[j]){
+                   maxDistricts[i] = Number(infoReg[j]);
+          }
+        }
+      }
+    }
+
+    for(let k in districtByIso) {
+      for (let i in maxDistricts) {
+        for (let j in infoReg) {
+          if(i == districtByIso[k] && j == k){
+            colorsReg[j] = Number(infoReg[j] / maxDistricts[i]).toFixed(2);
+          }
+        }
+      }
+    }
+    for(let i in colorsReg){
+      if(isNaN(colorsReg[i])) colorsReg[i] = 0..toFixed(2);
+    }
+
+    for(let k in districtByIso) {
+      for (let i in colorsReg) {
+        for (let j = 0; j < sumReg.length; j++) {
+          if(sumReg[j].SHORT_NAME == districtByIso[k] && i == k){
+            colorsReg[i] = hslToHex(sumReg[j].HUE, Number(colorsReg[i]),sumReg[j].LIGHTNESS);
+          }
+        }
+      }
+    }
 
     ymaps.ready(init);
     function init() {
@@ -281,17 +472,16 @@ export class MapsTestComponent implements OnInit {
       map.panes.append('white', pane);
       // Зададим цвета федеральных округов.
       const districtColors = {
-        cfo: 'rgba(243,243,104,0.99)',
-        szfo: 'rgba(84,203,186,0.98)',
-        yfo: 'rgba(249,118,142,0.99)',
-        skfo: 'rgba(154,85,151,0.98)',
-        pfo: 'rgba(48,203,5,0.99)',
-        urfo: 'rgba(186,193,204,0.98)',
-        sfo: 'rgba(22,172,219,0.99)',
-        dfo: 'rgba(251,197,32,0.99)'
+        cfo: '#ffff6f',
+        szfo: '#54cbba',
+        yfo: '#f9768e',
+        skfo: '#9a5597',
+        pfo: '#30cb05',
+        urfo: '#bac1cc',
+        sfo: '#16acdb',
+        dfo: '#fbc520'
       };
 
-      // '#54cbba',
       // Зададим подсказки при наведении на федеральный округ.
       const districtsHints = {
         cfo: 'ЦФО = ' + sumReg[0].VALUE_SUM ,
@@ -321,7 +511,7 @@ export class MapsTestComponent implements OnInit {
         // Для каждого федерального округа создадим коллекцию.
         // tslint:disable-next-line:forin
         for (const district in districtColors) {
-          console.log(districtColors[district]);
+          // console.log(districtColors[district]);
           districtCollections[district] = new ymaps.GeoObjectCollection(null, {
             fillColor: districtColors[district],
             strokeColor: districtColors[district],
@@ -331,14 +521,12 @@ export class MapsTestComponent implements OnInit {
             hintOpenTimeout: 0
           });
 
-          // console.log(districtColors[district]);
+          // console.log(districtCollections[district]);
           // Создадим свойство в коллекции, которое позже наполним названиями субъектов РФ.
           // districtCollections[district].properties.districts = [];
           districtCollections[district].properties.summas = [];
-          districtCollections[district].properties.regColors = [];
+          // districtCollections[district].properties.regColors = [];
         }
-
-
 
         // tslint:disable-next-line:only-arrow-functions typedef
         result.features.forEach(function(feature) {
@@ -362,19 +550,20 @@ export class MapsTestComponent implements OnInit {
           // Добавим субъект РФ в соответствующую коллекцию.
           districtCollections[district].add(new ymaps.GeoObject(feature));
 
-          console.log(districtCollections['szfo']);
+          // console.log(districtCollections['szfo']);
 
           // Добавим имя субъекта РФ в массив.
           // districtCollections[district].properties.districts.push(name);
           districtCollections[district].properties.summas.push(name+ " = "+ summa);
 
-          // console.log(feature.properties);
+          // console.log(districtCollections[district]);
         });
         // Создадим переменную, в которую будем сохранять выделенный в данный момент федеральный округ.
         let highlightedDistrict;
         for (const districtName in districtCollections) {
           // Добавим коллекцию на карту.
           map.geoObjects.add(districtCollections[districtName]);
+          // console.log(districtCollections[districtName]);
           // При наведении курсора мыши будем выделять федеральный округ.
           districtCollections[districtName].events.add(
             // tslint:disable-next-line:only-arrow-functions typedef
@@ -426,3 +615,6 @@ export class MapsTestComponent implements OnInit {
     }
   }
 }
+
+
+console.log(colorsReg);

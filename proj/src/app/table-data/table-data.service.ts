@@ -299,20 +299,20 @@ var regions: Region[] = [
   {
     REGION_ID: '1204092',
     PARENT_REGION_ID: '9000003',
-    VALUE_SUM: '0',
-    VALUE_WOMEN_KID: '0',
-    VALUE_WOMEN_ADULT: '0',
-    VALUE_WOMEN_SENIOR: '0',
-    VALUE_MEN_KID: '0',
-    VALUE_MEN_ADULT: '0',
-    VALUE_MEN_SENIOR: '0',
+    VALUE_SUM: '8898',
+    VALUE_WOMEN_KID: '10',
+    VALUE_WOMEN_ADULT: '10',
+    VALUE_WOMEN_SENIOR: '1234',
+    VALUE_MEN_KID: '10',
+    VALUE_MEN_ADULT: '10',
+    VALUE_MEN_SENIOR: '7654',
     REGION_NAME: 'Ленинградская область',
     ISO: 'RU-LEN'
   },
   {
     REGION_ID: '1300033',
     PARENT_REGION_ID: '9000003',
-    VALUE_SUM: '767',
+    VALUE_SUM: '7670',
     VALUE_WOMEN_KID: '95',
     VALUE_WOMEN_ADULT: '205',
     VALUE_WOMEN_SENIOR: '50',
@@ -638,7 +638,39 @@ const routes: Route[] = [
     CITY_TO_ID: '35417000000',
     CITY_FROM: 'Керчь',
     CITY_TO: 'Феодосия'
-  }
+  },
+  {
+  ID: '16',
+  PARENT_REGION_ID: '1204092',
+  VALUE_SUM: '8200',
+  VALUE_WOMEN_KID: '7000',
+  VALUE_WOMEN_ADULT: '220',
+  VALUE_WOMEN_SENIOR: '150',
+  VALUE_MEN_KID: '80',
+  VALUE_MEN_ADULT: '190',
+  VALUE_MEN_SENIOR: '110',
+  REGION_NAME: 'Санкт-Петербург',
+  CITY_FROM_ID: '40000000000',
+  CITY_TO_ID: '40277000000',
+  CITY_FROM: 'Санкт-Петербург',
+  CITY_TO: 'Колпино'
+},{
+ ID: '17',
+  PARENT_REGION_ID: '1204092',
+  VALUE_SUM: '1220',
+  VALUE_WOMEN_KID: '70',
+  VALUE_WOMEN_ADULT: '220',
+  VALUE_WOMEN_SENIOR: '150',
+  VALUE_MEN_KID: '80',
+  VALUE_MEN_ADULT: '190',
+  VALUE_MEN_SENIOR: '110',
+  REGION_NAME: 'Санкт-Петербург',
+  CITY_FROM_ID: '40000000000',
+  CITY_TO_ID: '40277000000',
+  CITY_FROM: 'Санкт-Петербург',
+  CITY_TO: 'Колпино'
+},
+
 ];
 
 @Injectable()

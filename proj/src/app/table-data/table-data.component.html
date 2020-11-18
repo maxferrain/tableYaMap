@@ -1,12 +1,15 @@
-<div>
-  <dx-data-grid
+<dx-data-grid
+    #grid
     id="gridContainer"
     [dataSource]="districts"
     [masterDetail]="{ enabled: true, template: 'detail' }"
     keyExpr="REGION_ID"
     [showBorders]="true"
     [allowColumnReordering]="true"
+    [hoverStateEnabled]="true"
+    [selectedRowKeys]="[]"
   >
+    <dxo-selection mode="single"></dxo-selection>
     <dxo-editing
       [allowUpdating]="false"
       [allowAdding]="true"
@@ -205,5 +208,12 @@
         </div>
       </dx-data-grid>
     </div>
-  </dx-data-grid>
+</dx-data-grid>
+
+<div id="employeeInfo" *ngIf="grid.selectedRowKeys.length">
+  <p class="employeeNotes">Выбран<br>
+    {{grid.instance.getSelectedRowsData()[0].REGION_NAME}}
+    (ID = {{grid.instance.getSelectedRowsData()[0].REGION_ID}})
+  </p>
 </div>
+
